@@ -1,0 +1,12 @@
+.well-size {
+  width: 350px;
+}
+
+.well-position {
+  float: right;
+  margin-top:-15px;
+}
+
+.pointer {
+  cursor: pointer;
+}
