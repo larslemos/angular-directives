@@ -1,4 +1,4 @@
-(function() {
+-(function() {
     'use strict';
 
     angular.module('directives')
@@ -65,7 +65,7 @@
             }
             $scope.nextLevel = function() {
               $scope.user.level++;
-              $scope.user.leve = $scope.user.level % 3;
+              $scope.user.level = $scope.user.level % 3;
 
             }
           }//userStateC
@@ -74,7 +74,7 @@
         function stateDisplay() {
             return {
               link: function(scope, el, attrs) {
-                scope.$watch(attrs['stateDisplay'], function(newValue) { 
+                scope.$watch(attrs['stateDisplay'], function(newValue) {
                     switch (newValue) {
                       case 0:
                         el.css('background-color', 'grey');

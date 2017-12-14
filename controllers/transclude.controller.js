@@ -7,5 +7,7 @@
           function TransCludeController(){
               var vm = this;
               vm.message = 'This is a message';
+
+              vm.baseLocation = "My answer";
           }//transclude
 })();

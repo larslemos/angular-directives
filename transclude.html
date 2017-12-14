@@ -13,15 +13,28 @@
 
   <body class="container"  >
       <div ng-controller="TransCludeController as vm">
-
         <display-box>
             <div>This is content inside</div>
             <ul>
               <li>Item 2</li>
             </ul>
             <div> {{vm.message}} </div>
-
         </display-box>
+
+        <h2>Questions</h2>
+          {{ vm.baseLocation }}
+          <my-question q="Which angular version youre coding?">
+            <input type="text" ng-model="vm.answers.baseVersion" >
+          </my-question>
+
+          <my-question q="Are you following best paractices?">
+              <input type="radio" value="true" ng-model="vm.answers.bestpractices"> Yes
+              <input type="radio" value="false" ng-model="vm.answers.bestpractices"> No
+          </my-question>
+          <my-question q="Do you code in TDD?">
+              <button class="btn btn-primary" value="true" ng-model="vm.answers.ttd">Yes</button>
+              <button class="btn btn-danger" value="false" ng-model="vm.answers.ttd">No</button>
+          </my-question>
 
         <pre>{{ vm | json }}</pre>
 
@@ -34,8 +47,8 @@
       <script type="text/javascript" src="controllers/transclude.controller.js"> </script>
 
       <!-- directives -->
-      <!-- <script type="text/javascript" src="directives/business.directive.js"> </script> -->
       <script type="text/javascript" src="directives/displayBox.directive.js"> </script>
+      <script type="text/javascript" src="directives/myQuestion.directive.js"> </script>
 
  </body>
 
