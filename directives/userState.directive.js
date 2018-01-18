@@ -66,7 +66,6 @@
             $scope.nextLevel = function() {
               $scope.user.level++;
               $scope.user.level = $scope.user.level % 3;
-
             }
           }//userStateC
         }//userState

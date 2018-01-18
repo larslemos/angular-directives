@@ -1,0 +1,22 @@
+<div class="panel panel-primary">
+  <div class="panel-heading" state-display="person.level">  {{ person.name }} </div>
+  <div class="panel-body" >
+
+      <address>  </address>
+
+      <h4> Friends </h4>
+      <ul>
+          <li ng-repeat="friend in person.friends">
+            {{friend}}
+              <remove-friend method="removeFriend(friend)"> </remove-friend>
+          </li>
+      </ul>
+
+      <div class="" ng-show="person.rank"> {{ person.rank }}</div>
+
+      <button class="btn btn-info" ng-click="promoteMeI()"
+        ng-if="!person.rank"> Rank</button>
+      <button class="btn btn-primary" ng-click="">Next Level</button>
+
+  </div>
+</div>
