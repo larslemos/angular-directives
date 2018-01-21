@@ -1,10 +1,23 @@
-<div ng-show="!!user.address && !collapsed" ng-click="collapseAddress()">
-  <b> Address </b>
-  <br/> Street: {{ user.address.street}}
-   <br/> City: {{ user.address.city}}
-   <br/> Planet: {{ user.address.planet}}
+<div ng-if="person">
+   <div ng-show="!!person.address && !collapsed" ng-click="collapseAddress()">
+      <b> Address </b>
+      <br/> Street: {{ person.address.street}}
+       <br/> City: {{ person.address.city}}
+       <br/> Planet: {{ person.address.planet}}
+   </div>
+   <div ng-show="!!person.address && collapsed" ng-click="expandAddress()">
+      <b> Address  </b> ...
+   </div> 
 </div>
-<div ng-show="!!user.address && collapsed" ng-click="expandAddress()">
-  <b> Address </b>
-  ...
+
+<div ng-if="person">
+  <div ng-show="!!person.specifications && !collapsed" ng-click="collapseAddress()">
+    <b> Specifications </b>
+    <br/> Manufacturer: {{ person.specifications.manufacturer}}
+     <br/> Type: {{ person.specifications.type }}
+     <br/> ProductLine: {{ person.specifications.productLine }}
+  </div>
+  <div ng-show="!!person.specifications && collapsed" ng-click="expandAddress()">
+    <b> Specifications </b> ...
+  </div>
 </div>

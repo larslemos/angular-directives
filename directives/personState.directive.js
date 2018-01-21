@@ -15,18 +15,17 @@
                 }
 
                 function personController($scope) {
-                    console.info($scope);
                     $scope.promoteMeI = function(user) {
                       $scope.person.rank = "Promoted";
-                      console.log($scope.person);
                     }
-                    $scope.nextLevel = function() {
-
+                    $scope.nextLevel = function() { 
+                      $scope.person.level++;
+                      $scope.person.level = $scope.person.level % 3 ;
                     }
                     $scope.removeFriend = function(friend) {
-                      console.log(friend);
-                      console.info($scope.person);
                       var idx = $scope.person.friends.indexOf(friend);
+                      if(idx > -1)
+                        $scope.person.friends.splice(idx, 1);
                     }
                 }
             }

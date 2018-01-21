@@ -13,19 +13,19 @@
                   notifyParent: '&method'
                 }
               }
-              function removeController($scope) { 
+              function removeController($scope) {
                 $scope.removing = false;
-                $scope.startRemoving = function() {
+                $scope.startRemoving = function() { 
                   $scope.removing = true;
                 }
                 $scope.cancel = function() {
                   $scope.removing = false;
                 }
                 $scope.confirmRemove = function() {
-                  // $scope.notifyParent();
+                  $scope.notifyParent();
 
                   //Override paramaters
-                  $scope.notifyParent({friend: 'Mauro'});
+                  // $scope.notifyParent({friend: 'Mauro'});
                 }
               }
           }//userRemoveCard

@@ -29,7 +29,8 @@
                     manufacturer: 'Industrial Automation',
                     type: 'G&E',
                     productLine: 'R2 Series'
-                  }
+                  },
+                  level: 1
                 };
 
 

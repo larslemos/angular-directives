@@ -61,7 +61,7 @@
             $scope.removeFriend = function(friend) {
               var index = $scope.user.friends.indexOf(friend);
               if(index > -1)
-                $scope.user.friends.splice(index);
+                $scope.user.friends.splice(index,1 );
             }
             $scope.nextLevel = function() {
               $scope.user.level++;
