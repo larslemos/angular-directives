@@ -1,0 +1,20 @@
+<user-panel name="{{vm.user.name}}" collapsed="{{ initialCollapsed }}" level="vm.user.level">
+
+  <pre> {{ person }}</pre>
+  <pre> {{ name }}</pre>
+  <pre> {{ vm }}</pre> 
+
+        <h4> Friends </h4>
+        <ul>
+            <li ng-repeat="friend in vm.user.friends">
+              {{friend}}
+                <remove-friend method="removeFriend(friend)"> </remove-friend>
+            </li>
+        </ul>
+
+        <div class="" ng-show="person.rank"> {{ person.rank }}</div>
+
+        <button class="btn btn-info" ng-click="promoteMeI()"
+          ng-if="!person.rank"> Rank</button>
+        <button class="btn btn-primary" ng-click="nextLevel()">Next Level</button>
+</user-panel>
