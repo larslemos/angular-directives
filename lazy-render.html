@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="directives">
+  <head>
+    <meta charset="utf-8">
+    <title> Transclude Function </title>
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+      <link rel="stylesheet" href="styles/styles.css" />
+      <link rel="stylesheet" href="styles/transclude.css" />
+      <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"> </script>
+      <script type="text/javascript" src="bower_components/angular/angular.js"> </script>
+      <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  </head>
+
+  <body class="container"  >
+      <div ng-controller="TransCludeController  as vm">
+        <h3> Lazy Render </h3>
+
+        <div my-lazy-render="showit">
+            <div ng-repeat="item in vm.items">
+              {{ item }}
+            </div>
+        </div>
+
+        <button class="btn btn-primary" ng-click="showit = true"> Render content </button>
+
+        <pre>{{ vm | json }}</pre>
+
+      </div>
+
+      <!-- module -->
+      <script type="text/javascript" src="modules/directives.module.js"> </script>
+
+      <!-- controller -->
+      <script type="text/javascript" src="controllers/transclude.controller.js"> </script>
+
+      <!-- directives -->
+      <script type="text/javascript" src="directives/myLazyRender.directive.js"> </script>
+
+ </body>
+
+</html>

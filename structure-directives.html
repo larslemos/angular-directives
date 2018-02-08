@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<html ng-app="directives">
+  <head>
+    <meta charset="utf-8">
+    <title>  Busines Specific  </title>
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+      <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"> </script>
+      <script type="text/javascript" src="bower_components/angular/angular.js"> </script>
+      <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  </head>
+
+  <body class="container"  >
+
+    <div ng-controller="StructureController as vm">
+        <h3> Structure Directive </h3>
+
+        <h4 ng-if="vm.showSubtitle"> They modify the structure of the DOM </h4>
+        <input type="checkbox" ng-model="vm.showSubtitle"> Checkbox
+
+
+        <h4> People </h4>
+        <ul> <li ng-repeat="people in vm.people "> {{ people }} </li> </ul>
+        <div class="well"> {{ vm }}</div>
+
+        <h4> Episodes </h4>
+        <div ng-switch on="vm.quality">
+            <div ng-switch-when="good"> I, II, III </div>
+            <div ng-switch-when="bad">   V, VI, VII </div>
+        </div>
+
+        <input type="radio" ng-model="vm.quality" value="good"> Good
+        <input type="radio" ng-model="vm.quality" value="bad"> Bad
+
+
+    </div>
+
+
+    <!-- module -->
+    <script type="text/javascript" src="modules/directives.module.js"> </script>
+
+    <!-- controller -->
+    <script type="text/javascript" src="controllers/structure.controller.js"> </script>
+
+    <!-- directives -->
+    <script type="text/javascript" src="directives/structure-directives.directive.js"> </script>
+    <script type="text/javascript" src="directives/panel.directive.js"> </script>
+    <script type="text/javascript" src="directives/userState.directive.js"> </script>
+
+</body>
+
+</html>
